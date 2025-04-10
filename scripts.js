@@ -10,4 +10,3 @@ document.getElementById('submit-code').addEventListener('click', function() {
     alert('Invalid code!');
   }
 });
-
