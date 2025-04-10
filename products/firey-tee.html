@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firey Tee - That Firey Kid Merch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Firey Tee</h1>
+    <p>Exclusive Firey Tee for bold adventurers like you!</p>
+  </header>
+
+  <main>
+    <div class="product-detail">
+      <img src="images/firey-tee.png" alt="Firey Tee" />
+      <p><strong>Price: $24.99</strong></p>
+      <p>Description: The ultimate tee for fans of That Firey Kid! Comfortable and stylish.</p>
+
+      <!-- Discount code section -->
+      <div class="discount-code">
+        <label for="discount-code">Enter Discount Code:</label>
+        <input type="text" id="discount-code" placeholder="Code here">
+        <button onclick="applyDiscount()">Apply Code</button>
+        <p id="discount-message"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 That Firey Kid - All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function applyDiscount() {
+      var code = document.getElementById("discount-code").value;
+      var message = document.getElementById("discount-message");
+
+      if (code === "TFK10") {
+        message.textContent = "Discount Applied: 10% Off!";
+        message.style.color = "green";
+      } else {
+        message.textContent = "Invalid code. Try again!";
+        message.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
 
