@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VGhlcm1pdGU= - That Firey Kid Merch Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>VGhlcm1pdGU=</h1>
+    <p>Discover this exclusive item, the mysterious VGhlcm1pdGU= product, perfect for those who dare to stand out.</p>
+  </header>
+
+  <main>
+    <div class="product-details">
+      <img src="images/thermium.png" alt="VGhlcm1pdGU=" class="product-image" />
+      <p><strong>VGhlcm1pdGU=</strong> - $B64</p>
+      <button class="main-btn" onclick="goToErrorPage()">Add to Cart</button>
+    </div>
+
+    <div class="discount-code">
+      <h2>Enter Secret Code</h2>
+      <input type="text" id="secret-code" placeholder="Enter Secret Password">
+      <button onclick="unlockLore()">Unlock Lore</button>
+      <p id="lore-message"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 That Firey Kid - All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function goToErrorPage() {
+      window.location.href = "error.html"; // Redirect to error page when 'Add to Cart' is clicked
+    }
+
+    function unlockLore() {
+      const code = document.getElementById('secret-code').value;
+      const loreMessage = document.getElementById('lore-message');
+
+      // Example secret codes for lore
+      const validCodes = ['TFKSECRET', 'FIRESURGE', 'LOREUNLOCKED'];
+      const loreText = {
+        'TFKSECRET': 'This is the first clue of the ARG. It has been hidden for a reason...',
+        'FIRESURGE': 'You have unlocked a special message from TFK: "Stay cautious, not everything is as it seems."',
+        'LOREUNLOCKED': 'You have unlocked the final secret... But at what cost? The truth will find you.',
+      };
+
+      if (validCodes.includes(code)) {
+        loreMessage.textContent = loreText[code];
+        loreMessage.style.color = 'green';
+      } else {
+        loreMessage.textContent = 'Invalid password. Try again.';
+        loreMessage.style.color = 'red';
+      }
+    }
+  </script>
+
+</body>
+</html>
 
