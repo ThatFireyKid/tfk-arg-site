@@ -4,28 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Firey Tee - That Firey Kid Merch Store</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Firey Tee - That Firey Kid</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
   <header>
     <h1>Firey Tee</h1>
-    <p>The classic Firey Tee, for those who like to stand out with style and comfort.</p>
+    <p>Exclusive Firey Tee for the bold and adventurous.</p>
   </header>
 
   <main>
-    <div class="product-details">
-      <img src="images/firey-tee.png" alt="Firey Tee" class="product-image" />
-      <p><strong>Firey Tee</strong> - $24.99</p>
-      <button class="main-btn" onclick="goToErrorPage()">Add to Cart</button>
-    </div>
+    <div class="product-page">
+      <img src="../images/firey-tee.png" alt="Firey Tee" class="product-img">
+      <p class="product-price"><strong>Price:</strong> $24.99</p>
+      <p class="product-description">This is the Firey Tee, a limited edition shirt for the boldest adventurers! Get it while you can.</p>
 
-    <div class="discount-code">
-      <h2>Enter Secret Code</h2>
-      <input type="text" id="secret-code" placeholder="Enter Secret Password">
-      <button onclick="unlockLore()">Unlock Lore</button>
-      <p id="lore-message"></p>
+      <!-- Secret Discount Code Area -->
+      <div class="discount-code-container">
+        <label for="discount-code">Enter Secret Code:</label>
+        <input type="text" id="discount-code" placeholder="Enter Code...">
+        <button id="apply-code">Apply</button>
+        <p id="discount-lore"></p>
+      </div>
+
+      <!-- Add to Cart Button -->
+      <a href="error.html" class="add-to-cart-btn">Add to Cart</a>
     </div>
   </main>
 
@@ -33,32 +37,7 @@
     <p>&copy; 2025 That Firey Kid - All Rights Reserved</p>
   </footer>
 
-  <script>
-    function goToErrorPage() {
-      window.location.href = "error.html"; // Redirect to error page when 'Add to Cart' is clicked
-    }
-
-    function unlockLore() {
-      const code = document.getElementById('secret-code').value;
-      const loreMessage = document.getElementById('lore-message');
-
-      // Example secret codes for lore
-      const validCodes = ['TFKSECRET', 'FIRESURGE', 'LOREUNLOCKED'];
-      const loreText = {
-        'TFKSECRET': 'This is the first clue of the ARG. It has been hidden for a reason...',
-        'FIRESURGE': 'You have unlocked a special message from TFK: "Stay cautious, not everything is as it seems."',
-        'LOREUNLOCKED': 'You have unlocked the final secret... But at what cost? The truth will find you.',
-      };
-
-      if (validCodes.includes(code)) {
-        loreMessage.textContent = loreText[code];
-        loreMessage.style.color = 'green';
-      } else {
-        loreMessage.textContent = 'Invalid password. Try again.';
-        loreMessage.style.color = 'red';
-      }
-    }
-  </script>
+  <script src="../scripts.js"></script>
 
 </body>
 </html>
