@@ -8,24 +8,24 @@
 /* Body and Layout */
 body {
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center;     /* Centers the content vertically */
-  flex-direction: column;
-  height: 100vh;           /* Full viewport height */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-color: #121212;
   font-family: 'Roboto', sans-serif;
   color: #00FF00;
   text-align: center;
+  flex-direction: column;
 }
 
 /* Header Styles */
 header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 h1 {
   font-size: 3em;
-  color: #FF6347; /* Firey Red */
+  color: #FF6347;
   margin-bottom: 10px;
 }
 
@@ -35,76 +35,85 @@ p {
   margin-bottom: 20px;
 }
 
-/* Product List Styling */
-.product-list {
+/* Product Page Styles */
+.product-page {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.product-list a {
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .product-img {
-  width: 150px;  /* Fixed size for product images */
+  width: 300px;
   height: auto;
-  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.product-list p {
+.product-price, .product-description {
   font-size: 1.2em;
-  color: #aaa;
+  color: #ccc;
+  margin-bottom: 20px;
 }
 
-/* Product Details Styling */
-.product-details {
-  margin-bottom: 40px;
-}
-
-.product-details img {
-  border-radius: 8px;
-}
-
-.product-details p {
-  font-size: 1.2em;
-  color: #aaa;
-}
-
-/* Secret Code Input Styling */
-.code-container {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  text-align: center;
+/* Discount Code Section */
+.discount-code-container {
+  margin-bottom: 20px;
 }
 
 #discount-code {
   padding: 10px;
   font-size: 1em;
-  width: 250px;
-  margin-right: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #00FF00;
   border-radius: 5px;
-  border: none;
 }
 
-#submit-code {
+#apply-code {
   padding: 10px 20px;
   background-color: #FF6347;
   color: white;
-  border: none;
+  font-size: 1.1em;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 
-#submit-code:hover {
+#apply-code:hover {
   background-color: #FF4500;
 }
 
-/* Footer Styling */
+#discount-lore {
+  color: #00FF00;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  background-color: #FF6347;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #FF4500;
+}
+
+/* Footer */
 footer {
   margin-top: 20px;
   font-size: 0.9em;
