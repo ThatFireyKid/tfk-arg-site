@@ -1,43 +1,31 @@
+<!-- firey-tee.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Firey Tee - That Firey Kid</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-
   <header>
     <h1>Firey Tee</h1>
-    <p>Exclusive Firey Tee for the bold and adventurous.</p>
   </header>
 
-  <main>
-    <div class="product-page">
-      <img src="../images/firey-tee.png" alt="Firey Tee" class="product-img">
-      <p class="product-price"><strong>Price:</strong> $24.99</p>
-      <p class="product-description">This is the Firey Tee, a limited edition shirt for the boldest adventurers! Get it while you can.</p>
+  <main class="product-page">
+    <img src="/images/firey-tee.png" alt="Firey Tee" class="product-img" />
+    <p class="product-desc">A bold design for bold fans. Show your Firey spirit with this exclusive tee.</p>
+    <p class="product-price">$24.99</p>
+    <button onclick="window.location.href='/error.html'">Add to Cart</button>
 
-      <!-- Secret Discount Code Area -->
-      <div class="discount-code-container">
-        <label for="discount-code">Enter Secret Code:</label>
-        <input type="text" id="discount-code" placeholder="Enter Code...">
-        <button id="apply-code">Apply</button>
-        <p id="discount-lore"></p>
-      </div>
-
-      <!-- Add to Cart Button -->
-      <a href="error.html" class="add-to-cart-btn">Add to Cart</a>
+    <div class="code-section">
+      <label for="secret-code">Enter Secret Code:</label>
+      <input type="text" id="secret-code" placeholder="Enter code..." />
+      <button onclick="checkCode()">Submit</button>
+      <div id="lore-output"></div>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 That Firey Kid - All Rights Reserved</p>
+    <p>&copy; 2025 That Firey Kid</p>
   </footer>
-
-  <script src="../scripts.js"></script>
-
-</body>
-</html>
